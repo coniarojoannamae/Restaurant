@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="stylesheet"
+    href="restaurant.component.css" />
+  <title>Document</title>
+</head>
+<body>
+
+<div class="container">
+  <div class="row">
+    <div *ngFor="let restaurants of restaurants" class="col-lg-">
+      <div class="card h-100">
+        <img [src]="restaurants.imageUrl" class="card-img-top" alt="{{restaurants.id}}">
+        <div class="card-body">
+          <span class="tag">{{ restaurants.status }}</span>
+          <h1 class="card-title">{{ restaurants.name }}</h1>
+          <p class="card-text">{{ restaurants.description }}</p>
+          <button class="btn btn-primary">Visit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
